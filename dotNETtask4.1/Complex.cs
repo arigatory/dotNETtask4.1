@@ -24,12 +24,15 @@ namespace dotNETtask4._1
                 res = "0";
             } else if (Math.Abs(Re) < epsilon)
             {
-                res = $"{Im:0.##}i";
+                if (Im < 0)
+                    res = (Math.Abs(Im) - 1 < epsilon) ? $"-i" : $"{Math.Abs(Im):0.##}i";
+                else
+                    res = (Math.Abs(Im) - 1 < epsilon) ? $"i" : $"{Im:0.##}i";
             } else if (Math.Abs(Im) < epsilon)
             {
                 if (Re < 0)
                     res += "-";
-                res += $"{Re:0.##}";
+                res += $"{Math.Abs(Re):0.##}";
             }
             else
             {
