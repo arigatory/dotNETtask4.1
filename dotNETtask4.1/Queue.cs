@@ -59,7 +59,9 @@ namespace dotNETtask4._1
             Node temp = _firstNode;
             while (temp != null)
             {
+                Console.ForegroundColor= (ConsoleColor)((int)(Math.Abs(temp.Data.Re)+Math.Abs(temp.Data.Im))%15+1); 
                 Console.Write("["+temp.Data+"]");
+                Console.ResetColor();
                 temp = temp.Next;
                 if (temp!=null)
                     Console.Write(" << ");

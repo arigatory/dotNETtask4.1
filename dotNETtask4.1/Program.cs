@@ -29,6 +29,11 @@ namespace dotNETtask4._1
 
             if (queue.Count == 0)
                 Console.WriteLine("В очереди закончились элементы");
+            else
+            {
+                Console.ReadLine();
+                Console.WriteLine("Программа завершена. Нажмите ENTER");
+            }
 
             Console.ReadLine();
 
